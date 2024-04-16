@@ -12,7 +12,7 @@ public class Insertion_Sort_List {
             ListNode prev = dummy;
 
 // find the position to insert the current node
-            while (prev.next != null &&  curr.val >= prev.next.val) {
+            while (prev.next != null && curr.val >= prev.next.val) {
                 prev = prev.next;
             }
 
@@ -29,16 +29,15 @@ public class Insertion_Sort_List {
 
     }
 
-    public static void display(ListNode head)
-    {
+    public static void display(ListNode head) {
         ListNode curr = head;
 
-        while (curr != null)
-        {
-            System.out.print(curr.val+" ");
+        while (curr != null) {
+            System.out.print(curr.val + " ");
             curr = curr.next;
         }
     }
+
     public static void main(String[] args) {
 
         ListNode head = new ListNode(3);

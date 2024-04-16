@@ -17,8 +17,7 @@ public class Kth_Ancestor_of_a_Tree_Node {
 
             int ans = -1;
 
-            while (k-- > 0)
-            {
+            while (k-- > 0) {
                 ans = parent[node];
                 node = ans;
             }

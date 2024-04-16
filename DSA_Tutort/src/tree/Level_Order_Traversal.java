@@ -5,26 +5,23 @@ import java.util.Queue;
 
 public class Level_Order_Traversal {
 
-    public static void levelOrder(TreeNode root)
-    {
-        if(root == null)
+    public static void levelOrder(TreeNode root) {
+        if (root == null)
             return;
 
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
 
-        while (!q.isEmpty())
-        {
+        while (!q.isEmpty()) {
             int size = q.size();
 
-            for(int i = 1;i<=size;i++)
-            {
+            for (int i = 1; i <= size; i++) {
                 TreeNode temp = q.poll();
-                System.out.print(temp.val+" ");
+                System.out.print(temp.val + " ");
 
-                if(temp.left != null)
+                if (temp.left != null)
                     q.add(temp.left);
-                if(temp.right !=  null)
+                if (temp.right != null)
                     q.add(temp.right);
             }
         }

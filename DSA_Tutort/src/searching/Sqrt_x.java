@@ -4,20 +4,18 @@ public class Sqrt_x {
 
     public int mySqrt(int x) {
 
-        int beg = 1,end = x;
+        int beg = 1, end = x;
         int ans = 0;
 
-        while (beg <= end)
-        {
-            int mid = beg + (end - beg)/2;
+        while (beg <= end) {
+            int mid = beg + (end - beg) / 2;
             int sq = mid * mid;
 
-            if(sq == x)
+            if (sq == x)
                 return mid;
-            else if(sq > x)
+            else if (sq > x)
                 end = mid - 1;
-            else
-            {
+            else {
                 ans = mid;
                 beg = mid + 1;
             }

@@ -2,11 +2,11 @@ package linked_list;
 
 public class DoublyLinkedList {
 
-    class Node
-    {
+    class Node {
         int data;
         Node prev;
         Node next;
+
         public Node(int data) {
             this.data = data;
             this.prev = this.next = null;
@@ -16,17 +16,13 @@ public class DoublyLinkedList {
     private Node head;
     private Node tail;
 
-    public void insertBegin(int data)
-    {
+    public void insertBegin(int data) {
         Node temp = new Node(data);
 
-        if(head == null)
-        {
+        if (head == null) {
             head = temp;
             tail = head;
-        }
-        else
-        {
+        } else {
             temp.next = head;
             head.prev = temp;
             head = temp;
@@ -34,29 +30,23 @@ public class DoublyLinkedList {
         }
     }
 
-    public void insertEnd(int data)
-    {
+    public void insertEnd(int data) {
         Node temp = new Node(data);
 
-        if(head == null)
-        {
+        if (head == null) {
             head = temp;
             tail = head;
-        }
-        else
-        {
+        } else {
             tail.next = temp;
             temp.prev = tail;
             tail = temp;
         }
     }
 
-    public void display()
-    {
-        if(head == null)
+    public void display() {
+        if (head == null)
             System.out.println("Empty list..nothing to display");
-        else
-        {
+        else {
             Node curr = head;
 
             while (curr != null) {

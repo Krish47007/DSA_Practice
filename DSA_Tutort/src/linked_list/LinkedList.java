@@ -2,8 +2,7 @@ package linked_list;
 
 public class LinkedList {
 
-    class Node
-    {
+    class Node {
         int data;
         Node next;
 
@@ -16,55 +15,46 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
-    public void insertBegin(int data)
-    {
+    public void insertBegin(int data) {
         Node temp = new Node(data);
 
-        if(head == null) {
+        if (head == null) {
             head = temp;
             tail = head;
-        }
-        else
-        {
+        } else {
             temp.next = head;
             head = temp;
         }
     }
 
-    public int countNodes()
-    {
+    public int countNodes() {
         int count = 0;
-        if(head == null)
+        if (head == null)
             return count;
-        else
-        {
+        else {
             Node temp = head;
 
-            while (temp!= null)
-            {
+            while (temp != null) {
                 count++;
                 temp = temp.next;
             }
             return count;
         }
     }
-    public void insertAtPos(int pos,int data)
-    {
 
-        if(head == null)
+    public void insertAtPos(int pos, int data) {
+
+        if (head == null)
             insertBegin(data);
         else if (pos >= countNodes()) // insert at end anyway if pos > total no. of nodes.
             insertEnd(data);
-        else
-        {
+        else {
             int currPos = 0;
             Node curr = head;
 
-            while (curr != null)
-            {
+            while (curr != null) {
                 currPos++;
-                if(currPos == pos)
-                {
+                if (currPos == pos) {
                     Node temp = new Node(data);
                     temp.next = curr.next;
                     curr.next = temp;
@@ -76,25 +66,20 @@ public class LinkedList {
 
     }
 
-    public void insertEnd(int data)
-    {
+    public void insertEnd(int data) {
         Node temp = new Node(data);
 
-        if(head == null) {
+        if (head == null) {
             head = temp;
             tail = head;
-        }
-        else
-        {
+        } else {
             tail.next = temp;
             tail = temp;
         }
     }
 
-    public void display()
-    {
-        if(head == null)
-        {
+    public void display() {
+        if (head == null) {
             System.out.println("Nothing to display...");
             return;
         }
@@ -102,7 +87,7 @@ public class LinkedList {
         Node temp = head;
 
         while (temp != null) {
-            System.out.print(temp.data+"\t");
+            System.out.print(temp.data + "\t");
             temp = temp.next;
         }
 
@@ -117,9 +102,9 @@ public class LinkedList {
 
         list.insertEnd(40);
         list.insertEnd(50);*/
-        list.insertAtPos(5,10);
-        list.insertAtPos(5,20);
-        list.insertAtPos(1,15);
+        list.insertAtPos(5, 10);
+        list.insertAtPos(5, 20);
+        list.insertAtPos(1, 15);
 
         list.display();
     }

@@ -44,11 +44,10 @@ return head; }
 
         int count = 0;
         ListNode curr = head;
-        ListNode leftPtr = null,rightPtr = null;
-        while (curr != null)
-        {
+        ListNode leftPtr = null, rightPtr = null;
+        while (curr != null) {
             count++;
-            if(count == left)
+            if (count == left)
                 leftPtr = curr;
             if (count == right) {
                 rightPtr = curr.next;

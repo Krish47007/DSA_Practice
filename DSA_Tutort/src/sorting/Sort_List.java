@@ -37,38 +37,36 @@ public class Sort_List {
 
     public ListNode middleNode(ListNode head) {
 
-        if(head == null)
+        if (head == null)
             return null;
 
-        ListNode slow = head,fast = head;
+        ListNode slow = head, fast = head;
 
-        while (fast != null && fast.next != null)
-        {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
         return slow;
     }
-    public static void display(ListNode head)
-    {
+
+    public static void display(ListNode head) {
         ListNode curr = head;
 
-        while (curr != null)
-        {
-            System.out.print(curr.val+" ");
+        while (curr != null) {
+            System.out.print(curr.val + " ");
             curr = curr.next;
         }
     }
-    public static ListNode sortList(ListNode head){
 
-        if(head == null || head.next == null)
+    public static ListNode sortList(ListNode head) {
+
+        if (head == null || head.next == null)
             return head;
 
-        ListNode prev = null,slow = head, fast = head;
+        ListNode prev = null, slow = head, fast = head;
 
-        while (fast != null && fast.next != null)
-        {
+        while (fast != null && fast.next != null) {
             prev = slow;
             slow = slow.next;
             fast = fast.next.next;
@@ -80,35 +78,28 @@ public class Sort_List {
         ListNode l1 = sortList(head);
         ListNode l2 = sortList(slow);
 
-        return mergeList(l1,l2);
+        return mergeList(l1, l2);
     }
 
     private static ListNode mergeList(ListNode l1, ListNode l2) {
 
-        ListNode head = null,tail = null;
+        ListNode head = null, tail = null;
 
-        while (l1 != null && l2 != null)
-        {
-            if(l1.val <= l2.val)
-            {
-                if(head == null)
-                {
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                if (head == null) {
                     head = l1;
                     tail = l1;
-                }
-                else {
+                } else {
                     tail.next = l1;
                     tail = l1;
                 }
                 l1 = l1.next;
-            }
-            else{
-                if(head == null)
-                {
+            } else {
+                if (head == null) {
                     head = l2;
                     tail = l2;
-                }
-                else {
+                } else {
                     tail.next = l2;
                     tail = l2;
                 }
@@ -117,15 +108,13 @@ public class Sort_List {
 
         }
 
-        while (l1 != null)
-        {
+        while (l1 != null) {
             tail.next = l1;
             tail = l1;
             l1 = l1.next;
         }
 
-        while (l2 != null)
-        {
+        while (l2 != null) {
             tail.next = l2;
             tail = l2;
             l2 = l2.next;
