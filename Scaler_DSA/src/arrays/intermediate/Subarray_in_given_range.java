@@ -1,0 +1,14 @@
+package arrays.intermediate;
+
+public class Subarray_in_given_range {
+
+    public int[] solve(int[] arr, int b, int c) {
+
+        int[] subArr = new int[c - b + 1];
+        int idx = 0;
+        for (int i = b; i <= c; i++)
+            subArr[idx++] = arr[i];
+
+        return subArr;
+    }
+}
