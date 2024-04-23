@@ -3,29 +3,8 @@ package arrays.intermediate.day_12_sub_arrays.classroom;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sub_Array_Sum {
+public class Sub_Array_Sum_Using_Prefix_Sum {
 
-    //Brute-Force solution - iterate through each sub array and sum them
-    public static List<Integer> getEachSubArraySum(int[] arr)
-    {
-        List<Integer> ans = new ArrayList<>();
-
-        for (int i = 0;i< arr.length;i++)
-        {
-            for (int j = i;j<arr.length;j++)
-            {
-                int sum = 0;
-                for (int k = i;k<=j;k++)
-                    sum += arr[k];
-
-                ans.add(sum);
-            }
-        }
-
-        return ans;
-    }
-
-    //Better approach using prefix sum
     private static int[] getPrefixSum(int[] arr)
     {
         int[] pf = new int[arr.length];
@@ -37,7 +16,7 @@ public class Sub_Array_Sum {
         return pf;
     }
 
-    public static List<Integer> getEachSubArraySum_2(int[] arr)
+    public static List<Integer> getEachSubArraySum(int[] arr)
     {
         List<Integer> ans = new ArrayList<>();
         int[] pf = getPrefixSum(arr);
@@ -54,12 +33,12 @@ public class Sub_Array_Sum {
 
         return ans;
     }
-
     public static void main(String[] args) {
 
         int[] arr = {6,8,-1,7};
 
-        for (int x : getEachSubArraySum_2(arr))
+        for (int x : getEachSubArraySum(arr))
             System.out.print(x + "\t");
     }
+
 }

@@ -1,4 +1,4 @@
-package arrays.intermediate;
+package arrays.intermediate.day_12_sub_arrays.assignment;
 
 public class Subarray_in_given_range {
 

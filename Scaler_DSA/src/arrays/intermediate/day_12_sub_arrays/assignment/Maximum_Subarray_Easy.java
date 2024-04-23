@@ -1,8 +1,8 @@
-package arrays.intermediate;
+package arrays.intermediate.day_12_sub_arrays.assignment;
 
 public class Maximum_Subarray_Easy {
 
-    public int maxSubarray(int a, int b, int[] c) {
+    /*public int maxSubarray(int a, int b, int[] c) {
 
         boolean isSumPossible = false;
         int maxSum = 0;
@@ -25,6 +25,22 @@ public class Maximum_Subarray_Easy {
             }
         }
 
+        return maxSum;
+    }*/
+
+    public static int maxSubarray(int A, int B, int[] C) {
+
+        int maxSum = 0; //as per question -ve values are not there in array
+        for (int i = 0;i<A;i++)
+        {
+            int sum = 0;
+            for (int j = i;j<A;j++)
+            {
+                sum += C[j];
+                if(sum <= B)
+                    maxSum = Math.max(maxSum,sum);
+            }
+        }
         return maxSum;
     }
 }

@@ -1,4 +1,4 @@
-package arrays.intermediate;
+package arrays.intermediate.day_12_sub_arrays.additional;
 
 public class Good_Subarrays_Easy {
 
