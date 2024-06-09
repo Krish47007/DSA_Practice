@@ -1,0 +1,32 @@
+package intermediate.day_7_intro_to_prob_solving.additional;
+
+public class Count_of_primes {
+
+    public int getNumFactors(int n) {
+
+        int count = 0;
+
+        for (int i = 1; i * i <= n;i++)
+        {
+            if(n % i == 0)
+            {
+                if(i != n/i)
+                    count+=2;
+                else
+                    count++;
+            }
+        }
+        return count;
+    }
+
+    public int solve(int n) {
+
+        int primeCount = 0;
+        for (int i = 1;i<= n;i++)
+        {
+            if(getNumFactors(n) == 2)
+                primeCount++;
+        }
+        return primeCount;
+    }
+}
