@@ -15,7 +15,7 @@ public class Sum_Of_All_Subarrays {
             for (int j = i;j<n;j++)
             {
                 int sum = 0;
-                for (int k = i;k <= j;k++)
+                for (int k = i; k <= j;k++)
                 {
                     sum += arr[k];
                 }
