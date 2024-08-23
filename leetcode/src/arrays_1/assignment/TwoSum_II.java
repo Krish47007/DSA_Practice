@@ -1,4 +1,4 @@
-package arrays;
+package arrays_1.assignment;
 
 public class TwoSum_II {
 
