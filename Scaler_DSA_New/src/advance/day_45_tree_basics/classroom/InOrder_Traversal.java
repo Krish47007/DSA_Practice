@@ -1,17 +1,17 @@
 package advance.day_45_tree_basics.classroom;
 
-import advance.day_45_tree_basics.Node;
+import advance.day_45_tree_basics.TreeNode;
 
 public class InOrder_Traversal {
 
-    public static void inorder(Node root)
+    public static void inorder(TreeNode root)
     {
         if(root == null)
             return;
         //Traverse left
         inorder(root.left);
         //Print current node data
-        System.out.print(root.data+" ");
+        System.out.print(root.val +" ");
         inorder(root.right);
     }
 
@@ -26,12 +26,12 @@ public class InOrder_Traversal {
 
          */
 
-        Node root = new Node(10);
-        root.left = new Node(5);
-        root.right = new Node(15);
-        root.left.left = new Node(3);
-        root.left.right = new Node(8);
-        root.right.left = new Node(12);
+        TreeNode root = new TreeNode(10);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(15);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(8);
+        root.right.left = new TreeNode(12);
 
         inorder(root);
     }
