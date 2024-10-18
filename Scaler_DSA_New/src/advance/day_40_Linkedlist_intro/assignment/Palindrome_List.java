@@ -1,7 +1,7 @@
 package advance.day_40_Linkedlist_intro.assignment;
 
 import advance.day_40_Linkedlist_intro.ListNode;
-import advance.day_40_Linkedlist_intro.SinglyLL_Generator;
+import advance.day_40_Linkedlist_intro.SinglyLinkedListUtil;
 
 import java.util.List;
 
@@ -49,7 +49,7 @@ public class Palindrome_List {
     }
     public static void main(String[] args) {
 
-        ListNode linkedList = SinglyLL_Generator.createSinglyLL(List.of(1,2,3,4,3,2,1));
+        ListNode linkedList = SinglyLinkedListUtil.createSinglyLL(List.of(1,2,3,4,3,2,1));
         System.out.println(lPalin(linkedList));
     }
 }

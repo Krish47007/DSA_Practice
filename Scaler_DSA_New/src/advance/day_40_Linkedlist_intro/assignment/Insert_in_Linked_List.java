@@ -1,7 +1,7 @@
 package advance.day_40_Linkedlist_intro.assignment;
 
 import advance.day_40_Linkedlist_intro.ListNode;
-import advance.day_40_Linkedlist_intro.SinglyLL_Generator;
+import advance.day_40_Linkedlist_intro.SinglyLinkedListUtil;
 
 import java.util.List;
 
@@ -49,7 +49,7 @@ public class Insert_in_Linked_List {
 
     public static void main(String[] args) {
 
-        ListNode head = SinglyLL_Generator.createSinglyLL(List.of(6,3,3,6,7,8,7,3,7));
+        ListNode head = SinglyLinkedListUtil.createSinglyLL(List.of(6,3,3,6,7,8,7,3,7));
         Print_Linked_List.solve(solve(head,3,5));
     }
 }
