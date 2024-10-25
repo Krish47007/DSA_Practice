@@ -1,11 +1,5 @@
 package advance.day_47_trees_2_views_types.additional;
 
-import advance.day_45_tree_basics.TreeNode;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Binary_Tree_From_Inorder_And_Preorder {
 /*
     private static TreeNode buildTreeRecursively(ArrayList<Integer> inorder,int is,int ie,

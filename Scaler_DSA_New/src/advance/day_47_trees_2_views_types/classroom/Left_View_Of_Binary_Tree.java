@@ -1,6 +1,6 @@
 package advance.day_47_trees_2_views_types.classroom;
 
-import advance.day_45_tree_basics.TreeNode;
+import advance.day_45_trees_1_basics.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
