@@ -1,13 +1,13 @@
-package arrays_1.classroom;
+package _1_arrays_1_and_hashing.classroom;
 
-public class Replace_Elements_with_Greatest_Element_on_Right_Side {
+public class Replace_Elements_with_Greatest_Element_on_Left_Side {
 
     public static int[] replaceElements(int[] arr) {
 
         int n = arr.length;
         int max = -1;
 
-        for (int i = n-1;i>=0;i--)
+        for (int i = 0;i<n;i++)
         {
             int temp = arr[i];
             arr[i] = max;

@@ -1,4 +1,4 @@
-package arrays_1.assignment;
+package _1_arrays_1_and_hashing.assignment;
 
 public class Best_Time_to_Buy_and_Sell_Stock_Better_soln {
 

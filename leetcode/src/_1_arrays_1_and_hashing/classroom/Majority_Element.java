@@ -1,4 +1,4 @@
-package arrays_1.classroom;
+package _1_arrays_1_and_hashing.classroom;
 
 import java.util.Arrays;
 
@@ -39,7 +39,7 @@ public class Majority_Element {
 
     public static void main(String[] args) {
 
-        System.out.println(majorityElement(new int[]{3,2,3}));
+        //System.out.println(majorityElement(new int[]{3,2,3}));
         System.out.println(majorityElement(new int[]{2,2,1,1,1,2,2}));
 
     }

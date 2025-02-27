@@ -1,4 +1,4 @@
-package arrays_1.assignment;
+package _1_arrays_1_and_hashing.assignment;
 
 public class Best_Time_to_Buy_and_Sell_Stock {
 
@@ -7,12 +7,12 @@ public class Best_Time_to_Buy_and_Sell_Stock {
         int n = A.length;
         int[] sf = new int[n];
         sf[n-1] = A[n-1];
-        int max = sf[n-1];
+        int maxOnRight = sf[n-1];
 
         for (int i = n-2;i>=0;i--)
         {
-            sf[i] = max;
-            max = Math.max(max,A[i]);
+            sf[i] = maxOnRight;
+            maxOnRight = Math.max(maxOnRight,A[i]);
         }
         return sf;
     }
@@ -21,12 +21,11 @@ public class Best_Time_to_Buy_and_Sell_Stock {
 
         int maxProfit = 0;
         int[] sf = buildSuffixLargest(prices);
-        for (int i = 0;i<prices.length;i++)
-        {
-            maxProfit = Math.max(maxProfit,sf[i] - prices[i]);
-        }
-        return maxProfit;
 
+        for (int i = 0;i<prices.length;i++)
+            maxProfit = Math.max(maxProfit,sf[i] - prices[i]);
+
+        return maxProfit;
     }
 
     public static void main(String[] args) {

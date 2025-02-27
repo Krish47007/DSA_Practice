@@ -1,6 +1,12 @@
-package arrays_1.classroom;
+package _1_arrays_1_and_hashing.classroom;
 
 public class Add_Binary {
+
+    public String addBinary_2(String a, String b) {
+        return Long.toBinaryString(
+                Long.parseLong(a, 2) + Long.parseLong(b, 2)
+        );
+    }
 
     public static String addBinary(String a, String b) {
 

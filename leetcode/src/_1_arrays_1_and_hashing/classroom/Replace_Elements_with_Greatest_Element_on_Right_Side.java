@@ -1,17 +1,18 @@
-package arrays_1.classroom;
+package _1_arrays_1_and_hashing.classroom;
 
-public class Replace_Elements_with_Greatest_Element_on_Left_Side {
+public class Replace_Elements_with_Greatest_Element_on_Right_Side {
 
     public static int[] replaceElements(int[] arr) {
 
         int n = arr.length;
-        int max = -1;
+        int maxElem = arr[n-1];
+        arr[n-1] = -1;
 
-        for (int i = 0;i<n;i++)
+        for (int i = n-2;i>=0;i--)
         {
             int temp = arr[i];
-            arr[i] = max;
-            max = Math.max(max,temp);
+            arr[i] = maxElem;
+            maxElem = Math.max(maxElem,temp);
         }
 
         return arr;

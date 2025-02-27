@@ -1,4 +1,4 @@
-package arrays_1.assignment;
+package _1_arrays_1_and_hashing.assignment;
 
 public class TwoSum_II {
 
